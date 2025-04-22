@@ -1,6 +1,7 @@
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MarieOperations {
+    //Create memory array and registers
     int[] memory = new int[4096];
     int AC = 0;
     int PC = 0;
@@ -41,7 +42,10 @@ public class MarieOperations {
     }
 
     //Takes user input and stores in the AC
-    public void input(int value){
+    public void input(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a value to input into AC: ");
+        int value = sc.nextInt();
         AC = value;
         System.out.println("Input : " + AC);
     }
@@ -76,7 +80,7 @@ public class MarieOperations {
         } else if(opcode == 4){
             subtract(address);
         } else if(opcode == 5){
-            input(address);
+            input();
         } else if(opcode == 6){
             output();
         } else {
