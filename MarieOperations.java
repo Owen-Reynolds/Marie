@@ -51,7 +51,11 @@ public class MarieOperations {
         System.out.println("Output : " + AC);
     }
 
-    //Fetches the instruction from the memory and returns it
+    public void halt(){
+        System.out.println("Halt");
+    }
+
+    //Fetches the instruction from the memory and decodes to binary then returns it
     public int fetch(){
         MAR = PC;
         IR = memory[MAR];
@@ -60,6 +64,48 @@ public class MarieOperations {
         int instruction = Integer.parseInt(binary, 2);
         System.out.println("Instruction as int: " + instruction);
         return instruction;
+    }
+
+    //Executes the instruction based on the opcode
+    public void execute(int instruction){
+        int opcode = instruction >> 8;
+        int address = instruction & 0xFF;
+
+        if(opcode == 1){
+            load(address);
+        } else if(opcode == 2){
+            store(address);
+        } else if(opcode == 3){
+            add(address);
+        } else if(opcode == 4){
+            subtract(address);
+        } else if(opcode == 5){
+            input(address);
+        } else if(opcode == 6){
+            output();
+        } else {
+            System.out.println("Invalid instruction");
+        }
+    }
+
+    //Runs the program by fetching and executing instructions in a loop
+    public void runProgram(){
+        while(true){
+            int instruction = fetch();
+            execute(instruction);
+            PC++;
+            if(instruction == 0b111100000000){
+                System.out.println("Halt");
+                break;
+            }
+        }
+    }
+    
+    //Loads a program into memory
+    public void loadProgram(int[] program){
+        for(int i = 0; i < program.length; i++){
+            memory[i] = program[i];
+        }
     }
 
 }
