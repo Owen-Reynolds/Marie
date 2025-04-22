@@ -1,13 +1,13 @@
 # Marie Simulator #
 
 ## Registers ##
-
-*AC* - Accumulator  
-*PC* - Program Counter  
-*MQ* -  
-*IR* -  
-*MAR* -  
-*MDR* -  
+|-----|-------------------------|
+|AC   |Accumulator              |
+|PC   |Program Counter          |
+|MQ   |Multiplier Quotient      |
+|IR   |Instruction Register     |
+|MAR  |Memory Address Register  |
+|MDR  |Memory Data Register     |
 
 ## Methods ##
 | Method Name | Method Operations                                                              |
