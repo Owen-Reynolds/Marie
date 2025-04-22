@@ -51,10 +51,6 @@ public class MarieOperations {
         System.out.println("Output : " + AC);
     }
 
-    public void halt(){
-        System.out.println("Halt");
-    }
-
     //Fetches the instruction from the memory and decodes to binary then returns it
     public int fetch(){
         MAR = PC;
