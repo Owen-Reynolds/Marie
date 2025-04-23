@@ -4,7 +4,11 @@
 Create a simple Marie Simulator that allows users to run and visualize the execution of Marie Assembley Code.
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt="Java Logo" width="300"/>
 
-          
+## Material Learned ##
+1. Basic Marie Concepts  
+2. Fetch-Decode-Execute Cycle
+3. Machine Level Instructions
+4. How CPUs operate internally
 
 ## Registers ##
 |Name |Full Name                |
@@ -122,4 +126,9 @@ java MarieDriver
 ### Requirements ###
 Java JDK 8 or later  
 A terminal or IDE  
+
+## Sources ##
+https://medium.com/@manurahimsara/beginners-guide-to-marie-assembly-language-a22a8f04df8a  
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax  
+https://www.geeksforgeeks.org/how-to-git-clone-a-remote-repository/  
 
