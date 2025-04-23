@@ -31,6 +31,7 @@ Create a simple Marie Simulator that allows users to run and visualize the execu
 |LoadProgram  |Loads a program into memory                                                     |
 
 ## Sample Program ##
+### Driver Code ###
 ```Java
 public class MarieDriver {
   public static void main(String[] args) {
@@ -49,6 +50,51 @@ public class MarieDriver {
   }
 }
 ```
+### Loading the Program ###
+```Java
+public void loadProgram(int[] program){
+          for(int i = 0; i < program.length; i++){
+                    memory[i] = program[i];
+          }
+}
+```
+### Running the Program ###
+```Java
+public void runProgram(){
+          while(true){
+                    int instruction = fetch();
+                    if(instruction == 0b111100000000){
+                              System.out.println("Halt");
+                              break;
+                    }
+                    execute(instruction);
+          }
+}
+```
+### Executing Opcode ###
+```Java
+public void execute(int instruction){
+          int opcode = instruction >> 8;
+          int address = instruction & 0xFF;
+
+          if(opcode == 1){
+                    load(address);
+          } else if(opcode == 2){
+                    store(address);
+          } else if(opcode == 3){
+                    add(address);
+          } else if(opcode == 4){
+                    subtract(address);
+          } else if(opcode == 5){
+                    input();
+          } else if(opcode == 6){
+                    output();
+          } else {
+                    System.out.println("Invalid instruction");
+          }
+}
+```
+### Summarize ###
 |Operation    |Output                                   |
 |-------------|-----------------------------------------|
 |Input 10     |Allows user to input value 10            |
