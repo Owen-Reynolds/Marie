@@ -102,9 +102,29 @@ public void execute(int instruction){
 <details>
   <summary>Load</summary>
   --Load Code goes here
-  <summary>Store</summary>
-  --Store Code goes here
 </details>
+<details>
+  <summary>Store</summary>
+  --Load Code goes here
+</details>
+<details>
+  <summary>Add</summary>
+  --Load Code goes here
+</details>
+<details>
+  <summary>Subtract</summary>
+  --Load Code goes here
+</details>
+<details>
+  <summary>Input</summary>
+  --Load Code goes here
+</details>
+<details>
+  <summary>Output</summary>
+  --Load Code goes here
+</details>
+
+
 ### Sample Program Operation Summary ###
 |Operation    |Output                                   |
 |-------------|-----------------------------------------|
