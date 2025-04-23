@@ -59,6 +59,21 @@ public class MarieDriver {
 |Halt         |Program Halted                           |
 
 ## Setup ##
-
-
+Follow these steps to run the program locally
+### 1. Clone the Repository ###
+```bash
+git clone https://github.com/Owen-Reynolds/Marie.git
+cd Marie
+```
+### 2. Compile the Program ###
+```bash 
+javac MarieOperations.java MarieDriver.java
+```
+### 3. Run Program ###
+```bash
+java MarieDriver
+```
+### Requirements ###
+Java JDK 8 or later  
+A terminal or IDE  
 
