@@ -98,39 +98,82 @@ public void execute(int instruction){
           }
 }
 ```
-### Instruction Set Methods ###
+
 <details>
-  <summary>Load</summary>
-  ```Java
-  public void load(int address){
+  <summary><strong>Instruction Set Methods</strong></summary>
+  
+  <br/>
+  
+  <details>
+    <summary><strong>Load</strong></summary>
+    
+    ```java
+    public void load(int address){
         MAR = address;
         MDR = memory[MAR];
         AC = MDR;
         System.out.println("Load:" + AC);
     }
-  ```
+    ```
+  </details>
+  <details>
+    <summary><strong>Store</strong></summary>
+    
+    ```java
+    public void store(int address){
+        MAR = address;
+        memory[MAR] = AC;
+        System.out.println("Store :" + AC );
+    }
+    ```
+  </details>
+  <details>
+    <summary><strong>Add</strong></summary>
+    
+    ```java
+    public void add(int address){
+        MAR = address;
+        MDR = memory[MAR];
+        AC += MDR;
+        System.out.println("Add : " + AC);
+    }
+    ```
+  </details>
+  <details>
+    <summary><strong>Subtract</strong></summary>
+    
+    ```java
+    public void subtract(int address){
+        MAR = address;
+        MDR = memory[MAR];
+        AC -= MDR;
+        System.out.println("Subtract : " + AC);
+    }
+    ```
+  </details>
+  <details>
+    <summary><strong>Input</strong></summary>
+    
+    ```java
+    public void input(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a value to input into AC: ");
+        int value = sc.nextInt();
+        AC = value;
+        System.out.println("Input : " + AC);
+    }
+    ```
+  </details>
+  <details>
+    <summary><strong>Output</strong></summary>
+    
+    ```java
+    public void output(){
+        System.out.println("Output : " + AC);
+    }
+    ```
+  </details>
 </details>
-<details>
-  <summary>Store</summary>
-  --Load Code goes here
-</details>
-<details>
-  <summary>Add</summary>
-  --Load Code goes here
-</details>
-<details>
-  <summary>Subtract</summary>
-  --Load Code goes here
-</details>
-<details>
-  <summary>Input</summary>
-  --Load Code goes here
-</details>
-<details>
-  <summary>Output</summary>
-  --Load Code goes here
-</details>
-
 
 ### Sample Program Operation Summary ###
 |Operation    |Output                                   |
