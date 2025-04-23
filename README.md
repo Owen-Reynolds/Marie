@@ -28,6 +28,24 @@ Create a simple Marie Simulator that allows users to run and visualize the execu
 |LoadProgram  |Loads a program into memory                                                     |
 
 ## Sample Program ##
+```Java
+public class MarieDriver {
+  public static void main(String[] args) {
+    MarieOperations marie = new MarieOperations();
+      int[] program = {
+                0b010100000000, //Input
+                0b001000001010, //Store
+                0b010100000000, //Input
+                0b001100001010, //Add
+                0b011000000000, //Output
+                0b111100000000  //Halt
+            };
+    
+      marie.loadProgram(program);
+      marie.runProgram();
+  }
+}
+```
 |Operation    |Output                                   |
 |-------------|-----------------------------------------|
 |Input 10     |Allows user to input value 10            |
