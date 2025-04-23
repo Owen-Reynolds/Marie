@@ -151,6 +151,30 @@ public void execute(int instruction){
   </code></pre>
 </details>
 
+<details>
+  <summary><strong>Input</strong></summary>
+
+  <pre><code class="language-java">
+  public void input(){
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter a value to input into AC: ");
+      int value = sc.nextInt();
+      AC = value;
+      System.out.println("Input : " + AC);
+  }
+  </code></pre>
+</details>
+
+<details>
+  <summary><strong>Output</strong></summary>
+
+  <pre><code class="language-java">
+  public void output(){
+      System.out.println("Output : " + AC);
+  }
+  </code></pre>
+</details>
+
 ### Sample Program Operation Summary ###
 |Operation    |Output                                   |
 |-------------|-----------------------------------------|
