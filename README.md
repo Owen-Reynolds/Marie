@@ -99,76 +99,57 @@ public void execute(int instruction){
 }
 ```
 ### Instruction Set Methods ###
-  
-  <details>
-    <summary><strong>Load</strong></summary>
-    
-    ```Java
-    public void load(int address){
-        MAR = address;
-        MDR = memory[MAR];
-        AC = MDR;
-        System.out.println("Load:" + AC);
-    }
-    ```
-  </details>
-  <details>
-    <summary><strong>Store</strong></summary>
-    
-    ```Java
-    public void store(int address){
-        MAR = address;
-        memory[MAR] = AC;
-        System.out.println("Store :" + AC );
-    }
-    ```
-  </details>
-  <details>
-    <summary><strong>Add</strong></summary>
-    
-    ```Java
-    public void add(int address){
-        MAR = address;
-        MDR = memory[MAR];
-        AC += MDR;
-        System.out.println("Add : " + AC);
-    }
-    ```
-  </details>
-  <details>
-    <summary><strong>Subtract</strong></summary>
-    
-    ```Java
-    public void subtract(int address){
-        MAR = address;
-        MDR = memory[MAR];
-        AC -= MDR;
-        System.out.println("Subtract : " + AC);
-    }
-    ```
-  </details>
-  <details>
-    <summary><strong>Input</strong></summary>
-    
-    ```Java
-    public void input(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a value to input into AC: ");
-        int value = sc.nextInt();
-        AC = value;
-        System.out.println("Input : " + AC);
-    }
-    ```
-  </details>
-  <details>
-    <summary><strong>Output</strong></summary>
-    
-    ```Java
-    public void output(){
-        System.out.println("Output : " + AC);
-    }
-    ```
-  </details>
+
+<details>
+  <summary><strong>Load</strong></summary>
+
+  <pre><code class="language-java">
+  public void load(int address){
+      MAR = address;
+      MDR = memory[MAR];
+      AC = MDR;
+      System.out.println("Load:" + AC);
+  }
+  </code></pre>
+</details>
+
+<details>
+  <summary><strong>Store</strong></summary>
+
+  <pre><code class="language-java">
+  public void store(int address){
+      MAR = address;
+      memory[MAR] = AC;
+      System.out.println("Store :" + AC );
+  }
+  </code></pre>
+</details>
+
+<details>
+  <summary><strong>Add</strong></summary>
+
+  <pre><code class="language-java">
+  public void add(int address){
+      MAR = address;
+      MDR = memory[MAR];
+      AC += MDR;
+      System.out.println("Add : " + AC);
+  }
+  </code></pre>
+</details>
+
+<details>
+  <summary><strong>Subtract</strong></summary>
+
+  <pre><code class="language-java">
+  public void subtract(int address){
+      MAR = address;
+      MDR = memory[MAR];
+      AC -= MDR;
+      System.out.println("Subtract : " + AC);
+  }
+  </code></pre>
+</details>
 
 ### Sample Program Operation Summary ###
 |Operation    |Output                                   |
