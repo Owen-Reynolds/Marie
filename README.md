@@ -101,9 +101,9 @@ public void execute(int instruction){
 ### Summarize ###
 |Operation    |Output                                   |
 |-------------|-----------------------------------------|
-|Input 10     |Allows user to input value 10            |
+|Input        |Allows user to input value               |
 |Store        |Stores the previous input                |
-|Input 10     |Allows user to input value 10            |
+|Input        |Allows user to input value               |
 |Add          |Adds input value with store value        |
 |Output       |Displays value                           |
 |Halt         |Program Halted                           |
