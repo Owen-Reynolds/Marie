@@ -98,16 +98,12 @@ public void execute(int instruction){
           }
 }
 ```
-
-<details>
-  <summary><strong>Instruction Set Methods</strong></summary>
-  
-  <br/>
+### Instruction Set Methods ###
   
   <details>
     <summary><strong>Load</strong></summary>
     
-    ```java
+    ```Java
     public void load(int address){
         MAR = address;
         MDR = memory[MAR];
@@ -119,7 +115,7 @@ public void execute(int instruction){
   <details>
     <summary><strong>Store</strong></summary>
     
-    ```java
+    ```Java
     public void store(int address){
         MAR = address;
         memory[MAR] = AC;
@@ -130,7 +126,7 @@ public void execute(int instruction){
   <details>
     <summary><strong>Add</strong></summary>
     
-    ```java
+    ```Java
     public void add(int address){
         MAR = address;
         MDR = memory[MAR];
@@ -142,7 +138,7 @@ public void execute(int instruction){
   <details>
     <summary><strong>Subtract</strong></summary>
     
-    ```java
+    ```Java
     public void subtract(int address){
         MAR = address;
         MDR = memory[MAR];
@@ -154,7 +150,7 @@ public void execute(int instruction){
   <details>
     <summary><strong>Input</strong></summary>
     
-    ```java
+    ```Java
     public void input(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a value to input into AC: ");
@@ -167,13 +163,12 @@ public void execute(int instruction){
   <details>
     <summary><strong>Output</strong></summary>
     
-    ```java
+    ```Java
     public void output(){
         System.out.println("Output : " + AC);
     }
     ```
   </details>
-</details>
 
 ### Sample Program Operation Summary ###
 |Operation    |Output                                   |
