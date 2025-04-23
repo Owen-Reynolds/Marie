@@ -1,6 +1,10 @@
 # Marie Simulator #
 
+## Objective ##
+Create a simple Marie Simulator that allows users to run and visualize the execution of Marie Assembley Code.
+
 ## Registers ##
+|Name |Full Name                |
 |-----|-------------------------|
 |AC   |Accumulator              |
 |PC   |Program Counter          |
@@ -22,4 +26,18 @@
 |Execute      |Executes the instruction based on the opcode                                    |
 |RunProgram   |Runs the program by fetching and executing instructions in a loop               |
 |LoadProgram  |Loads a program into memory                                                     |
+
+## Sample Program ##
+|Operation    |Output                                   |
+|-------------|-----------------------------------------|
+|Input 10     |Allows user to input value 10            |
+|Store        |Stores the previous input                |
+|Input 10     |Allows user to input value 10            |
+|Add          |Adds input value with store value        |
+|Output       |Displays value                           |
+|Halt         |Program Halted                           |
+
+## Setup ##
+
+
 
