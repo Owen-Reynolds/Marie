@@ -55,15 +55,13 @@ public class MarieOperations {
         System.out.println("Output : " + AC);
     }
 
-    //Fetches the instruction from the memory and decodes to binary then returns it
+    //Fetches the instruction from the memory and then returns it
     public int fetch(){
         MAR = PC;
         IR = memory[MAR];
-        //Converstys the IR to binary
-        String binary = Integer.toBinaryString(IR);
-        int instruction = Integer.parseInt(binary, 2);
-        System.out.println("Instruction as int: " + instruction);
-        return instruction;
+        PC++;
+        System.out.println("Instruction: " + IR);
+        return IR;
     }
 
     //Executes the instruction based on the opcode
@@ -92,12 +90,13 @@ public class MarieOperations {
     public void runProgram(){
         while(true){
             int instruction = fetch();
-            execute(instruction);
-            PC++;
+
             if(instruction == 0b111100000000){
                 System.out.println("Halt");
                 break;
             }
+
+            execute(instruction);
         }
     }
     
