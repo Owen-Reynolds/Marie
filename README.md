@@ -101,7 +101,14 @@ public void execute(int instruction){
 ### Instruction Set Methods ###
 <details>
   <summary>Load</summary>
-  --Load Code goes here
+  ```Java
+  public void load(int address){
+        MAR = address;
+        MDR = memory[MAR];
+        AC = MDR;
+        System.out.println("Load:" + AC);
+    }
+  ```
 </details>
 <details>
   <summary>Store</summary>
