@@ -2,6 +2,8 @@
 
 ## Objective ##
 Create a simple Marie Simulator that allows users to run and visualize the execution of Marie Assembley Code.
+![Language](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg)
+          
 
 ## Registers ##
 |Name |Full Name                |
