@@ -98,7 +98,14 @@ public void execute(int instruction){
           }
 }
 ```
-### Summarize ###
+### Instruction Set Methods ###
+<details>
+  <summary>Load</summary>
+  --Load Code goes here
+  <summary>Store</summary>
+  --Store Code goes here
+</details>
+### Sample Program Operation Summary ###
 |Operation    |Output                                   |
 |-------------|-----------------------------------------|
 |Input        |Allows user to input value               |
