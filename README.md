@@ -75,6 +75,15 @@ public void runProgram(){
           }
 }
 ```
+### Fetching Instruction ###
+```Java
+public int fetch(){
+          MAR = PC;
+          IR = memory[MAR];
+          PC++;
+          return IR;
+}
+```
 ### Executing Opcode ###
 ```Java
 public void execute(int instruction){
