@@ -93,20 +93,25 @@ public void execute(int instruction){
           int address = instruction & 0xFF;
 
           if(opcode == 1){
-                    load(address);
-          } else if(opcode == 2){
-                    store(address);
-          } else if(opcode == 3){
-                    add(address);
-          } else if(opcode == 4){
-                    subtract(address);
-          } else if(opcode == 5){
-                    input();
-          } else if(opcode == 6){
-                    output();
-          } else {
-                    System.out.println("Invalid instruction");
-          }
+            load(address);
+        } else if(opcode == 2){
+            store(address);
+        } else if(opcode == 3){
+            add(address);
+        } else if(opcode == 4){
+            subtract(address);
+        } else if(opcode == 5){
+            input();
+        } else if(opcode == 6){
+            output();
+        } else if(opcode == 7){
+            multiply(address);
+        } else if(opcode == 8){
+            divide(address);
+        }
+        else {
+            System.out.println("Invalid instruction");
+        }
 }
 ```
 ### Instruction Set Methods ###
