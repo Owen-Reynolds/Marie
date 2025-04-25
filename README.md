@@ -27,6 +27,8 @@ Create a simple Marie Simulator that allows users to run and visualize the execu
 |Store        |Stores the value in the AC to the address in MAR                                |
 |Add          |Adds the value in the address in MAR to the AC                                  |
 |Subtract     |Subtracts the value in the address in MAR from the AC                           |
+|Multipy      |Multiplies the value in the address in MAR with the AC                          |
+|Divide       |Divides the value in the address in MAR by the AC                               |
 |Input        |Takes user input and stores in the AC                                           |
 |Output       |Outputs the value in the AC to the console                                      |
 |Fetch        |Fetches the instruction from the memory and decodes to binary then returns it   |
@@ -157,6 +159,36 @@ public void execute(int instruction){
       AC -= MDR;
       System.out.println("Subtract : " + AC);
   }
+  </code></pre>
+</details>
+
+<details>
+  <summary><strong>Multiply</strong></summary>
+
+  <pre><code class="language-java">
+  public void multiply(int address){
+        MAR = address;
+        MDR = memory[MAR];
+        AC *= MDR;
+        System.out.println("Multiply : " + AC);
+  }
+  </code></pre>
+</details>
+
+<details>
+  <summary><strong>Divide</strong></summary>
+
+  <pre><code class="language-java">
+  public void divide(int address){
+        MAR = address;
+        MDR = memory[MAR];
+        if(MDR != 0){
+            AC /= MDR;
+            System.out.println("Divide : " + AC);
+        } else {
+            System.out.println("Error: Division by zero");
+        }
+    }
   </code></pre>
 </details>
 
