@@ -41,6 +41,7 @@ public class MarieOperations {
         System.out.println("Subtract : " + AC);
     }
 
+    //Multiplies the value in the address in MAR with the AC
     public void multiply(int address){
         MAR = address;
         MDR = memory[MAR];
@@ -48,6 +49,7 @@ public class MarieOperations {
         System.out.println("Multiply : " + AC);
     }
 
+    //Divides the value in the address in MAR by the AC
     public void divide(int address){
         MAR = address;
         MDR = memory[MAR];
