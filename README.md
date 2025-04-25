@@ -217,14 +217,14 @@ public void execute(int instruction){
 </details>
 
 ### Sample Program Operation Summary ###
-|Operation    |Output                                   |
-|-------------|-----------------------------------------|
-|Input        |Allows user to input value               |
-|Store        |Stores the previous input                |
-|Input        |Allows user to input value               |
-|Add          |Adds input value with store value        |
-|Output       |Displays value                           |
-|Halt         |Program Halted                           |
+|Operation    |Output                                   |Machine Instructions
+|-------------|-----------------------------------------|--------------------|
+|Input        |Allows user to input value               |010100000000        |
+|Store        |Stores the previous input                |001000001010        |
+|Input        |Allows user to input value               |010100000000        |
+|Add          |Adds input value with store value        |001100001010        |
+|Output       |Displays value                           |011000000000        |
+|Halt         |Program Halted                           |111100000000        |
 
 ## Setup ##
 Follow these steps to run the program locally
