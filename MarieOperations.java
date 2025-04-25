@@ -22,7 +22,7 @@ public class MarieOperations {
     public void store(int address){
         MAR = address;
         memory[MAR] = AC;
-        System.out.println("Store :" + AC );
+        System.out.println("Store : " + AC );
     }
 
     //Adds the value in the address in MAR to the AC
@@ -39,6 +39,24 @@ public class MarieOperations {
         MDR = memory[MAR];
         AC -= MDR;
         System.out.println("Subtract : " + AC);
+    }
+
+    public void multiply(int address){
+        MAR = address;
+        MDR = memory[MAR];
+        AC *= MDR;
+        System.out.println("Multiply : " + AC);
+    }
+
+    public void divide(int address){
+        MAR = address;
+        MDR = memory[MAR];
+        if(MDR != 0){
+            AC /= MDR;
+            System.out.println("Divide : " + AC);
+        } else {
+            System.out.println("Error: Division by zero");
+        }
     }
 
     //Takes user input and stores in the AC
@@ -60,7 +78,6 @@ public class MarieOperations {
         MAR = PC;
         IR = memory[MAR];
         PC++;
-        System.out.println("Instruction: " + IR);
         return IR;
     }
 
@@ -81,7 +98,12 @@ public class MarieOperations {
             input();
         } else if(opcode == 6){
             output();
-        } else {
+        } else if(opcode == 7){
+            multiply(address);
+        } else if(opcode == 8){
+            divide(address);
+        }
+        else {
             System.out.println("Invalid instruction");
         }
     }
