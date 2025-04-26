@@ -66,10 +66,9 @@ public class MarieDriver {
                 int assemblyInput = 0;
                 ArrayList<Integer> list = new ArrayList<Integer>();
                 while(assemblyInput != -1){
-                    System.out.println("Enter the assembly instruction: ");
-                    System.out.println("-1 to stop and run the program");
+                    System.out.println("Enter the assembly instruction(-1 to stop): ");
                     assemblyInput = sc.nextInt();
-                    if(Integer.toString(assemblyInput).length() == 12){
+                    if(assemblyInput != -1){
                         list.add(assemblyInput);
                     }else if(assemblyInput == -1){
                         //Convert ArrayList to Array
