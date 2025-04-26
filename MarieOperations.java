@@ -130,5 +130,4 @@ public class MarieOperations {
             memory[i] = program[i];
         }
     }
-
 }

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class MarieDriver {
     public static void main(String[] args) {
 
@@ -46,7 +46,9 @@ public class MarieDriver {
             0b111100000000, // -> halt
         };
 
+
         int input = -1;
+
         while(true){
             System.out.println("Welcome to the MARIE simulator!");
             System.out.println("Please select an option:");
@@ -56,22 +58,46 @@ public class MarieDriver {
             System.out.println("3. Multiply two numbers");
             System.out.println("4. Divide two numbers");
             System.out.println("5. Exit");
-            System.out.println("");
+            input = sc.nextInt();
+
+        
+
             if(input == 0){
+                int assemblyInput = 0;
+                ArrayList<Integer> list = new ArrayList<Integer>();
+                while(assemblyInput != -1){
+                    System.out.println("Enter the assembly instruction: ");
+                    System.out.println("-1 to stop and run the program");
+                    assemblyInput = sc.nextInt();
+                    if(Integer.toString(assemblyInput).length() == 12){
+                        list.add(assemblyInput);
+                    }else if(assemblyInput == -1){
+                        //Convert ArrayList to Array
+                        int[] convert = list.stream().mapToInt(Integer::intValue).toArray();
+                        marie.loadProgram(convert);
+                        marie.runProgram();
+                        break;
+                    }    
+                    else{
+                        System.out.println("Invalid Instruction Try Again");
+                    }
                     
+                }    
             }else if(input == 1){
                 marie.loadProgram(addition);
+                marie.runProgram();
             }else if(input == 2){
                 marie.loadProgram(subtraction);
+                marie.runProgram();
             }else if(input == 3){
                 marie.loadProgram(multiply);
+                marie.runProgram();
             }else if(input == 4){
                 marie.loadProgram(divide);
+                marie.runProgram();
             }else{
                 break;
             }
         }
-        //Run the program in the memory
-        marie.runProgram();
     }
 }
