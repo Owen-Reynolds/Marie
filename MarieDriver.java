@@ -82,19 +82,24 @@ public class MarieDriver {
                     }
                     
                 }    
-            }else if(input == 1){
+            }
+            else if(input == 1){
                 marie.loadProgram(addition);
                 marie.runProgram();
-            }else if(input == 2){
+            }
+            else if(input == 2){
                 marie.loadProgram(subtraction);
                 marie.runProgram();
-            }else if(input == 3){
+            }
+            else if(input == 3){
                 marie.loadProgram(multiply);
                 marie.runProgram();
-            }else if(input == 4){
+            }
+            else if(input == 4){
                 marie.loadProgram(divide);
                 marie.runProgram();
-            }else{
+            }
+            else{
                 break;
             }
         }
