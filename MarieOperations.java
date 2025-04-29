@@ -38,6 +38,7 @@ public class MarieOperations {
         MAR = address;
         MDR = memory[MAR];
         AC -= MDR;
+        AC = Math.abs(AC);
         System.out.println("Subtract : " + AC);
     }
 

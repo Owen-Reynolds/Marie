@@ -41,7 +41,7 @@ public class MarieDriver {
             0b010100000000, // Opcode 5 Value 10 -> input()
             0b001000001010, // Opcode 2 Value 10 -> store 10
             0b010100000000, // Opcode 5 Value 10 -> input()
-            0b100000001010, // Opcode 4 Value 20 -> multiply 10
+            0b100000001010, // Opcode 8 Value 20 -> divide 10
             0b011000000000, // Opcode 6 Value 20 -> output()
             0b111100000000, // -> halt
         };
@@ -59,8 +59,6 @@ public class MarieDriver {
             System.out.println("4. Divide two numbers");
             System.out.println("5. Exit");
             input = sc.nextInt();
-
-        
 
             if(input == 0){
                 int assemblyInput = 0;
