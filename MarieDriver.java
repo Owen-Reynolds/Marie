@@ -62,22 +62,23 @@ public class MarieDriver {
             //Loading Opcode Program
             if(input == 0){
                 marie.reset();
-                int assemblyInput = 0;
+                String assemblyInput = "";
+                //ArrayList for input
                 ArrayList<Integer> list = new ArrayList<Integer>();
-                while(assemblyInput != -1){
+                while(true){
                     System.out.println("Enter the assembly instruction(-1 to stop): ");
-                    assemblyInput = sc.nextInt();
-                    if(assemblyInput != -1){
-                        list.add(assemblyInput);
-                    }else if(assemblyInput == -1){
-                        //Convert ArrayList to Array
+                    assemblyInput = sc.next();
+                    if(assemblyInput.equals("-1")){
                         int[] convert = list.stream().mapToInt(Integer::intValue).toArray();
                         marie.loadProgram(convert);
                         marie.runProgram();
                         break;
                     }    
-                    else{
-                        System.out.println("Invalid Instruction Try Again");
+                    try{
+                        int instruction = Integer.parseInt(assemblyInput, 2);
+                        list.add(instruction);
+                    } catch(NumberFormatException e){
+                        System.out.println("Invalid Instruction, Please Try Again");
                     }
                     
                 }    
