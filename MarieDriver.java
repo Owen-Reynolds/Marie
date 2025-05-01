@@ -16,9 +16,6 @@ public class MarieDriver {
             0b111100000000  // -> halt
         };
 
-        //Debug why the subtraction is returing a negative number instead of a positive number
-        //Works when inputting the smaller number first then the larger number,
-        //but not the other way around
         int[] subtraction = {
             0b010100000000, // Opcode 5 Value 10 -> input()
             0b001000001010, // Opcode 2 Value 10 -> store 10
