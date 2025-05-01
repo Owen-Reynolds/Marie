@@ -35,6 +35,7 @@ Create a simple Marie Simulator that allows users to run and visualize the execu
 |Execute      |Executes the instruction based on the opcode                                    |
 |RunProgram   |Runs the program by fetching and executing instructions in a loop               |
 |LoadProgram  |Loads a program into memory                                                     |
+|Reset        |Reset registers and memory                                                      |
 
 ## Sample Program ##
 ### Driver Code ###
@@ -112,6 +113,18 @@ public void execute(int instruction){
         else {
             System.out.println("Invalid instruction");
         }
+}
+```
+### Reset ###
+```Java
+public void reset(){
+        Arrays.fill(memory, 0);
+        AC = 0;
+        PC = 0;
+        IR = 0;
+        MAR = 0;
+        MDR = 0; 
+        MQ = 0;
 }
 ```
 ### Instruction Set Methods ###
