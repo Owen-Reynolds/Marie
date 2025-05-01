@@ -46,7 +46,6 @@ public class MarieDriver {
             0b111100000000, // -> halt
         };
 
-
         int input = -1;
 
         while(true){
@@ -60,7 +59,9 @@ public class MarieDriver {
             System.out.println("5. Exit");
             input = sc.nextInt();
 
+            //Loading Opcode Program
             if(input == 0){
+                marie.reset();
                 int assemblyInput = 0;
                 ArrayList<Integer> list = new ArrayList<Integer>();
                 while(assemblyInput != -1){
@@ -82,18 +83,22 @@ public class MarieDriver {
                 }    
             }
             else if(input == 1){
+                marie.reset();
                 marie.loadProgram(addition);
                 marie.runProgram();
             }
             else if(input == 2){
+                marie.reset();
                 marie.loadProgram(subtraction);
                 marie.runProgram();
             }
             else if(input == 3){
+                marie.reset();
                 marie.loadProgram(multiply);
                 marie.runProgram();
             }
             else if(input == 4){
+                marie.reset();
                 marie.loadProgram(divide);
                 marie.runProgram();
             }

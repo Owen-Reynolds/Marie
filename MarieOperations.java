@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MarieOperations {
@@ -38,7 +39,6 @@ public class MarieOperations {
         MAR = address;
         MDR = memory[MAR];
         AC -= MDR;
-        AC = Math.abs(AC);
         System.out.println("Subtract : " + AC);
     }
 
@@ -130,5 +130,15 @@ public class MarieOperations {
         for(int i = 0; i < program.length; i++){
             memory[i] = program[i];
         }
+    }
+
+    public void reset(){
+        Arrays.fill(memory, 0);
+        AC = 0;
+        PC = 0;
+        IR = 0;
+        MAR = 0;
+        MDR = 0; 
+        MQ = 0;
     }
 }
